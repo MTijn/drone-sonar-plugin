@@ -31,4 +31,17 @@ steps
         from_secret: sonar_host
       sonar_token:
         from_secret: sonar_token
+      key: some_project_key
 ```
+### Available settings
+- key: The project key the project is going to be build with
+- sonar_host: The SonarQube host
+- sonar_token: The token to authenticate to the SonarQube host with
+- timeout: The web request timeout, standard set to 60 seconds
+- sources: The sources that have to be scanned, comma separated
+- inclusions: SonarQube property, extends the sources property
+- exclusions: The source files that should not be analysed, comma separated
+- level: The log level used during analysing the source code
+- showProfiling: Show profiling information during scanning
+- branchAnalysis: Only used with a licensed SonarQube version
+- usingProperties: If set to true, the settings will be overridden by the sonar.properties file

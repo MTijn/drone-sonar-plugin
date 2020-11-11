@@ -19,7 +19,7 @@ func main() {
 		cli.StringFlag{
 			Name:   "key",
 			Usage:  "project key",
-			EnvVar: "DRONE_REPO",
+			EnvVar: "PLUGIN_KEY",
 		},
 		cli.StringFlag{
 			Name:   "name",
@@ -105,17 +105,16 @@ func run(c *cli.Context) {
 			Host:  c.String("host"),
 			Token: c.String("token"),
 
-			Version:        c.String("ver"),
-			Branch:         c.String("branch"),
-			Timeout:        c.String("timeout"),
-			Sources:        c.String("sources"),
-			Inclusions:     c.String("inclusions"),
-			Exclusions:     c.String("exclusions"),
-			Level:          c.String("level"),
-			ShowProfiling:  c.String("showProfiling"),
-			BranchAnalysis: c.Bool("branchAnalysis"),
+			Version:         c.String("ver"),
+			Branch:          c.String("branch"),
+			Timeout:         c.String("timeout"),
+			Sources:         c.String("sources"),
+			Inclusions:      c.String("inclusions"),
+			Exclusions:      c.String("exclusions"),
+			Level:           c.String("level"),
+			ShowProfiling:   c.String("showProfiling"),
+			BranchAnalysis:  c.Bool("branchAnalysis"),
 			UsingProperties: c.Bool("usingProperties"),
-
 		},
 	}
 
